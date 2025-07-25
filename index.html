@@ -44,6 +44,7 @@
       height: 300px;
     }
 
+    /* Tamaño base de los items de carrusel */
     .carousel-item {
       min-width: 150px;
       margin: 0 5px;
@@ -175,6 +176,32 @@
       margin: 2rem 0;
     }
 
+    footer#promo-footer {
+      background-color: #fff;
+      color: #111;
+      font-weight: 600;
+      padding: 1rem 0;
+      cursor: pointer;
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+      letter-spacing: 0.03em;
+      user-select: none;
+      transition: background-color 0.3s;
+    }
+    footer#promo-footer:hover {
+      background-color: #f0f0f0;
+    }
+
+    @media (min-width: 601px) {
+      .carousel-item {
+        min-width: 210px;
+        margin: 0 7px;
+      }
+      .carousel-track {
+        height: 420px; /* 300px * 1.4 */
+      }
+    }
+
     @media (max-width: 600px) {
       h1 {
         font-size: 1.8rem;
@@ -185,12 +212,12 @@
       }
 
       .carousel-track {
-        height: 250px;
+        height: 350px;
       }
 
       .carousel-item {
-        min-width: 160px;
-        margin: 0 3px;
+        min-width: 224px;
+        margin: 0 4.2px;
       }
 
       .buttons a {
@@ -248,6 +275,11 @@
     <div class="lightbox-content" id="lightbox-content"></div>
     <span class="close" onclick="closeLightbox()" aria-label="Close lightbox">✕</span>
   </div>
+
+  <footer id="promo-footer" onclick="window.open('https://irvyandl.github.io/PageDesignWithIrvin/?utm_source=Seb%27s+Web&utm_medium=Telegram', '_blank')"
+    role="link" tabindex="0" onkeypress="if(event.key==='Enter'){this.click();}">
+    Click here to have a website like this!
+  </footer>
 
   <footer>
     <p>&copy; 2025 Irvin Prado. <em>Ascende Superius – Seek Higher Things</em></p>
