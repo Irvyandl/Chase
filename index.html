@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OnlyFans Promo Landing</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #111;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-top: 1.5rem;
+    }
+    .carousel-container {
+      width: 100vw;
+      overflow: hidden;
+      margin: 1rem 0;
+    }
+    .carousel-track {
+      display: flex;
+      animation: scroll 40s linear infinite;
+      height: 200px;
+    }
+    .carousel-item {
+      min-width: 150px;
+      margin: 0 5px;
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+    .carousel-item img,
+    .carousel-item video {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+      transition: opacity 0.3s;
+    }
+    .carousel-item img:hover {
+      opacity: 0.65;
+    }
+    .blurred img {
+      filter: blur(4.8px);
+    }
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .buttons {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .buttons a {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 1rem 2rem;
+      background: #f26eaa;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: transform 0.3s, background 0.3s;
+    }
+    .buttons a:hover {
+      transform: scale(1.1);
+      background: #e05591;
+    }
+    .social-icons {
+      text-align: center;
+      margin: 1rem 0;
+    }
+    .social-icons a {
+      margin: 0 10px;
+      display: inline-block;
+    }
+    .social-icons img {
+      width: 40px;
+      height: 40px;
+      filter: brightness(0) invert(1);
+      transition: transform 0.3s;
+    }
+    .social-icons img:hover {
+      transform: scale(1.2);
+    }
+    .lightbox {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: rgba(0, 0, 0, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+    .lightbox-content {
+      position: relative;
+      max-width: 90%;
+      max-height: 90%;
+    }
+    .lightbox img,
+    .lightbox video {
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: 10px;
+    }
+    .lightbox .close {
+      position: absolute;
+      top: -30px;
+      right: -10px;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>🔥 Exclusive Content & Follow on Socials 🔥</h1>
+
+  <div class="carousel-container">
+    <div class="carousel-track" id="carousel1"></div>
+  </div>
+
+  <div class="carousel-container">
+    <div class="carousel-track blurred" id="carousel2"></div>
+  </div>
+
+  <div class="buttons">
+    <a href="https://fansly.com/chasestobbe/posts">Fansly</a>
+    <a href="https://onlyfans.com/chasestobbe">OnlyFans</a>
+    <a href="https://www.youtube.com/channel/UCohGJmQPdwgaTm0WtDznSjA">YouTube</a>
+    <a href="https://throne.com/chasestobbe">Throne</a>
+    <a href="https://www.amazon.com/hz/wishlist/ls/202O8YT4MMZT7?ref_=wl_share">Amazon Wishlist</a>
+    <a href="https://discord.gg/ejbWDSdt46">Discord</a>
+    <a href="https://www.chasestobbe.com/coaching-1">Coaching Page</a>
+    <a href="https://cash.app/$ChaseStobbe">CashApp</a>
+    <a href="https://venmo.com/u/Chase-Stobbe">Venmo</a>
+    <a href="https://www.snapchat.com/add/chaseStobbe">Snapchat</a>
+  </div>
+
+  <div class="social-icons">
+    <a href="https://www.tiktok.com/@ChaseStobbe" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok"></a>
+    <a href="https://www.instagram.com/ChaseStobbe" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram"></a>
+    <a href="https://www.twitter.com/StobbeChase" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter"></a>
+  </div>
+
+  <div class="lightbox" id="lightbox" style="display:none">
+    <div class="lightbox-content" id="lightbox-content"></div>
+    <span class="close" onclick="closeLightbox()">✕</span>
+  </div>
+
+  <script>
+    const videos = [
+      'https://github.com/Irvyandl/Chase/raw/refs/heads/main/assets/Vid3.mp4',
+      'https://github.com/Irvyandl/Chase/raw/refs/heads/main/assets/Vid2.mp4',
+      'https://github.com/Irvyandl/Chase/raw/refs/heads/main/assets/VID1.mp4'
+    ];
+
+    const images = [
+      'https://github.com/Irvyandl/Chase/blob/main/assets/PicC2.jpg?raw=true',
+      'https://github.com/Irvyandl/Chase/blob/main/assets/Pic8.jpg?raw=true',
+      'https://github.com/Irvyandl/Chase/blob/main/assets/Pic7.jpg?raw=true',
+      'https://github.com/Irvyandl/Chase/blob/main/assets/Pic6.jpg?raw=true',
+      'https://github.com/Irvyandl/Chase/blob/main/assets/Pic5.jpg?raw=true',
+      'https://github.com/Irvyandl/Chase/blob/main/assets/Pic4.jpg?raw=true',
+      'https://github.com/Irvyandl/Chase/blob/main/assets/Pic3C2.jpg?raw=true',
+      'https://github.com/Irvyandl/Chase/blob/main/assets/Pic344c2.jpg?raw=true',
+      'https://github.com/Irvyandl/Chase/blob/main/assets/Pic3.jpg?raw=true',
+      'https://github.com/Irvyandl/Chase/blob/main/assets/Pic2.jpg?raw=true',
+      'https://github.com/Irvyandl/Chase/blob/main/assets/Pic1C2.jpg?raw=true',
+      'https://github.com/Irvyandl/Chase/blob/main/assets/Pic10.jpg?raw=true',
+      'https://github.com/Irvyandl/Chase/blob/main/assets/Forc2.jpg?raw=true',
+      'https://github.com/Irvyandl/Chase/blob/main/assets/Pic1.jpg?raw=true'
+    ];
+
+    const normalImages = images.filter(url => !url.toLowerCase().includes('c2'));
+    const blurredImages = images.filter(url => url.toLowerCase().includes('c2'));
+
+    function shuffle(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+
+    const carousel1 = document.getElementById('carousel1');
+    const carousel2 = document.getElementById('carousel2');
+
+    const shuffledNormal = shuffle([...normalImages]);
+    const shuffledBlurred = shuffle([...blurredImages]);
+
+    let videoIndex = 0;
+    shuffledNormal.forEach((img, i) => {
+      const item = document.createElement('div');
+      item.className = 'carousel-item';
+      item.innerHTML = `<img src="${img}" onclick="openLightbox(this.src)">`;
+      carousel1.appendChild(item);
+
+      if ((i + 1) % 2 === 0 && videoIndex < videos.length) {
+        const video = document.createElement('div');
+        video.className = 'carousel-item';
+        video.innerHTML = `<video autoplay loop muted playsinline onclick="openLightbox('${videos[videoIndex]}', true)"><source src="${videos[videoIndex]}" type="video/mp4"></video>`;
+        carousel1.appendChild(video);
+        videoIndex++;
+      }
+    });
+
+    shuffledBlurred.forEach(img => {
+      const item = document.createElement('div');
+      item.className = 'carousel-item';
+      item.innerHTML = `<img src="${img}" style="filter: blur(4.8px);" onclick="openLightbox('${img}', false, true)">`;
+      carousel2.appendChild(item);
+    });
+
+    function openLightbox(src, isVideo = false, isBlur = false) {
+      const lightbox = document.getElementById('lightbox');
+      const content = document.getElementById('lightbox-content');
+      content.innerHTML = isVideo ?
+        `<video src="${src}" autoplay loop muted controls style="max-width:100%; max-height:100%; border-radius: 10px;"></video>` :
+        `<img src="${src}" style="${isBlur ? 'filter: blur(4.8px);' : ''}">`;
+      lightbox.style.display = 'flex';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+      document.getElementById('lightbox-content').innerHTML = '';
+    }
+  </script>
+</body>
+</html>
