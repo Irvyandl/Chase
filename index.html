@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -13,11 +12,13 @@
       color: #fff;
       overflow-x: hidden;
     }
+
     h1 {
       text-align: center;
       font-size: 2.5rem;
       margin-top: 1.5rem;
     }
+
     h2 {
       text-align: center;
       font-size: 2.2rem;
@@ -28,22 +29,26 @@
       font-style: normal;
       letter-spacing: 0.04em;
     }
+
     .carousel-container {
       width: 100vw;
       overflow: hidden;
       margin: 1rem 0;
     }
+
     .carousel-track {
       display: flex;
-      animation: scroll 27.6s linear infinite; /* 45% más rápido */
-      height: 280px; /* 40% más alto que 200px */
+      animation: scroll 10s linear infinite;
+      height: 300px;
     }
+
     .carousel-item {
       min-width: 150px;
       margin: 0 5px;
       flex-shrink: 0;
       cursor: pointer;
     }
+
     .carousel-item img,
     .carousel-item video {
       width: 100%;
@@ -52,20 +57,25 @@
       object-fit: cover;
       transition: opacity 0.3s;
     }
+
     .carousel-item img:hover {
       opacity: 0.65;
     }
+
     .blurred img {
       filter: blur(2.88px);
     }
+
     @keyframes scroll {
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
     }
+
     .buttons {
       text-align: center;
       margin: 2rem 0;
     }
+
     .buttons a {
       display: inline-block;
       margin: 0.5rem;
@@ -77,10 +87,12 @@
       transition: transform 0.3s, background 0.3s;
       font-weight: 600;
     }
+
     .buttons a:hover {
       transform: scale(1.1);
       background: #e05591;
     }
+
     .social-icons {
       text-align: center;
       margin: 1rem 0 2rem;
@@ -88,18 +100,22 @@
       justify-content: center;
       gap: 20px;
     }
+
     .social-icons a {
       display: inline-block;
     }
+
     .social-icons img {
       width: 40px;
       height: 40px;
       filter: brightness(0) invert(1);
       transition: transform 0.3s;
     }
+
     .social-icons img:hover {
       transform: scale(1.2);
     }
+
     .lightbox {
       position: fixed;
       top: 0; left: 0;
@@ -110,17 +126,24 @@
       justify-content: center;
       z-index: 1000;
     }
+
     .lightbox-content {
       position: relative;
-      max-width: 90%;
-      max-height: 90%;
+      width: 85vw;
+      height: 85vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
+
     .lightbox img,
     .lightbox video {
       max-width: 100%;
       max-height: 100%;
+      object-fit: contain;
       border-radius: 10px;
     }
+
     .lightbox .close {
       position: absolute;
       top: 10px;
@@ -138,9 +161,11 @@
       user-select: none;
       transition: background 0.3s;
     }
+
     .lightbox .close:hover {
       background: rgba(255,255,255,0.3);
     }
+
     footer p {
       text-align: center;
       color: #888;
@@ -148,25 +173,29 @@
       margin: 2rem 0;
     }
 
-    /* Responsive Mobile */
     @media (max-width: 600px) {
       h1 {
         font-size: 1.8rem;
       }
+
       h2 {
         font-size: 1.5rem;
       }
+
       .carousel-track {
-        height: 180px; /* proporcionalmente más pequeño para móviles */
+        height: 300px;
       }
+
       .carousel-item {
-        min-width: 100px;
+        min-width: 120px;
         margin: 0 3px;
       }
+
       .buttons a {
         padding: 0.75rem 1.2rem;
         font-size: 0.9rem;
       }
+
       .social-icons img {
         width: 30px;
         height: 30px;
@@ -182,10 +211,9 @@
     <div class="carousel-track" id="carousel1"></div>
   </div>
 
-  <!-- Botones exceptuando Youtube, Discord, Coaching Page, Snapchat, Twitch -->
   <div class="buttons" id="buttons-main">
     <a href="https://onlyfans.com/cmschse">My Premium OnlyFans 💎</a>
-     <a href="https://onlyfans.com/chasestobbe">My Free OnlyFans 💋</a>
+    <a href="https://onlyfans.com/chasestobbe">My Free OnlyFans 💋</a>
     <a href="https://fansly.com/chasestobbe/posts">My Fansly 🔥</a>
     <a href="https://throne.com/chasestobbe">My Throne 👑</a>
     <a href="https://www.amazon.com/hz/wishlist/ls/202O8YT4MMZT7?ref_=wl_share">My Amazon Wishlist 🎁</a>
@@ -193,7 +221,6 @@
     <a href="https://venmo.com/u/Chase-Stobbe">My Venmo 💰</a>
   </div>
 
-  <!-- Íconos sociales debajo del botón main -->
   <div class="social-icons">
     <a href="https://www.tiktok.com/@ChaseStobbe" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok"></a>
     <a href="https://www.instagram.com/ChaseStobbe" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram"></a>
@@ -204,15 +231,13 @@
     <div class="carousel-track blurred" id="carousel2"></div>
   </div>
 
-  <!-- Nuevo título debajo del carrusel borroso -->
   <h1>🌟 Follow me on my socials 🚀</h1>
   <h2>Chase Stobble</h2>
 
-  <!-- Botones Youtube, Discord, Coaching Page, Snapchat y Twitch -->
   <div class="buttons" id="buttons-secondary">
     <a href="https://www.youtube.com/channel/UCohGJmQPdwgaTm0WtDznSjA">My YouTube ▶️</a>
-    <a href="https://discord.gg/ejbWDSdt46">My Discord 💬</a>
-    <a href="https://www.chasestobbe.com/coaching-1">My Coaching Page 📚</a>
+    <a href="https://discord.gg/ejbWDSdt46">My Discord 💬</a> 
+    <a href="https://www.chasestobbe.com/coaching-1">My Workout Programs 📚</a>
     <a href="https://www.snapchat.com/add/chaseStobbe">My Snapchat 👻</a>
     <a href="https://twitch.tv/OctopusNipples">My Twitch 🎮</a>
   </div>
@@ -280,15 +305,13 @@
         }
       });
 
-      // Duplicar contenido para efecto scroll infinito
       imgs.forEach((img, i) => {
         const item = document.createElement('div');
         item.className = 'carousel-item';
         item.innerHTML = `<img src="${img}" ${isBlurred ? 'style="filter: blur(2.88px);"' : ''} onclick="openLightbox('${img}', false, ${isBlurred})">`;
         fragment.appendChild(item);
 
-        if (!isBlurred && (i + 1) % 2 === 0 && videoIndex < videos.length * 2) { 
-          // Duplicar videos también
+        if (!isBlurred && (i + 1) % 2 === 0 && videoIndex < videos.length * 2) {
           const videoIdx = videoIndex - videos.length;
           if(videoIdx < videos.length){
             const video = document.createElement('div');
